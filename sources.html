@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{width:100%;height:100%;overflow:hidden;background:transparent;}
+.banner{width:100%;height:100vh;overflow:hidden;position:relative;background:linear-gradient(180deg,#091409 0%,#112211 50%,#091409 100%);}
+.star{position:absolute;border-radius:50%;animation:twinkle ease-in-out infinite;}
+@keyframes twinkle{0%,100%{opacity:.08;transform:scale(1);}50%{opacity:1;transform:scale(1.6);}}
+.link-line{position:absolute;height:1px;animation:linkpulse 3s ease-in-out infinite;}
+@keyframes linkpulse{0%,100%{opacity:.06;}50%{opacity:.35;}}
+.spin{position:absolute;border-radius:50%;animation:spinit linear infinite;}
+@keyframes spinit{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.leaf{position:absolute;border-radius:50% 0 50% 0;animation:sway 4s ease-in-out infinite;transform-origin:bottom center;}
+.leafr{border-radius:0 50% 0 50%;}
+@keyframes sway{0%,100%{transform:rotate(-8deg);}50%{transform:rotate(8deg);}}
+.floater{position:absolute;border-radius:50%;opacity:0;animation:floatup 5s ease-in-out infinite;}
+@keyframes floatup{0%{opacity:0;transform:translateY(0);}40%{opacity:.6;}100%{opacity:0;transform:translateY(-90px);}}
+.node{position:absolute;border-radius:50%;animation:nodepulse 2.5s ease-in-out infinite;}
+@keyframes nodepulse{0%,100%{transform:scale(1);opacity:.3;}50%{transform:scale(1.6);opacity:.8;}}
+.tw{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:20;white-space:nowrap;}
+.ey{font-family:Georgia,serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(140,220,100,.85);margin-bottom:6px;animation:fu .8s ease both;}
+.mt{font-family:Georgia,serif;font-weight:700;color:#fff;font-size:52px;line-height:1.1;animation:fu .8s ease .15s both;text-shadow:0 2px 20px rgba(0,0,0,.9);}
+.mt span{color:#8cd464;}
+.br{height:3px;background:#8cd464;border-radius:2px;margin:8px auto 0;animation:gb 1s ease .3s both;}
+@keyframes fu{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+@keyframes gb{from{width:0;}to{width:60px;}}
+</style>
+</head>
+<body>
+<div class="banner">
+  <!-- twinkling stars in green tones -->
+  <div class="star" style="width:3px;height:3px;background:#7ecf6e;left:5%;top:18%;animation-duration:2s;animation-delay:0s;"></div>
+  <div class="star" style="width:2px;height:2px;background:#56c43e;left:13%;top:42%;animation-duration:2.5s;animation-delay:.4s;"></div>
+  <div class="star" style="width:4px;height:4px;background:#aaff44;left:22%;top:14%;animation-duration:1.8s;animation-delay:.8s;"></div>
+  <div class="star" style="width:2px;height:2px;background:#7ecf6e;left:32%;top:58%;animation-duration:3s;animation-delay:.2s;"></div>
+  <div class="star" style="width:5px;height:5px;background:#8cd464;left:44%;top:22%;animation-duration:2.2s;animation-delay:1s;"></div>
+  <div class="star" style="width:2px;height:2px;background:#56c43e;left:60%;top:48%;animation-duration:2.7s;animation-delay:.6s;"></div>
+  <div class="star" style="width:3px;height:3px;background:#aaff44;left:70%;top:16%;animation-duration:2s;animation-delay:1.2s;"></div>
+  <div class="star" style="width:2px;height:2px;background:#7ecf6e;left:80%;top:52%;animation-duration:2.4s;animation-delay:.3s;"></div>
+  <div class="star" style="width:4px;height:4px;background:#8cd464;left:90%;top:20%;animation-duration:1.9s;animation-delay:.9s;"></div>
+  <div class="star" style="width:2px;height:2px;background:#56c43e;left:96%;top:44%;animation-duration:2.6s;animation-delay:.5s;"></div>
+  <div class="star" style="width:3px;height:3px;background:#aaff44;left:8%;top:72%;animation-duration:2.1s;animation-delay:1.4s;"></div>
+  <div class="star" style="width:2px;height:2px;background:#7ecf6e;left:50%;top:70%;animation-duration:2.8s;animation-delay:.7s;"></div>
+  <!-- glowing connection lines -->
+  <div class="link-line" style="width:130px;background:#7ecf6e;left:4%;top:38%;transform:rotate(-9deg);animation-delay:0s;"></div>
+  <div class="link-line" style="width:100px;background:#56c43e;left:22%;top:60%;transform:rotate(6deg);animation-delay:1s;"></div>
+  <div class="link-line" style="width:120px;background:#7ecf6e;right:8%;top:32%;transform:rotate(-13deg);animation-delay:.5s;"></div>
+  <div class="link-line" style="width:90px;background:#56c43e;right:28%;top:62%;transform:rotate(9deg);animation-delay:1.5s;"></div>
+  <!-- spinning rings -->
+  <div class="spin" style="width:42px;height:42px;border:1.5px solid rgba(126,207,110,.2);left:4%;top:50%;margin-top:-21px;animation-duration:10s;"></div>
+  <div class="spin" style="width:26px;height:26px;border:1px solid rgba(100,180,80,.15);left:4%;top:50%;margin-top:-13px;margin-left:8px;animation-duration:6s;animation-direction:reverse;"></div>
+  <div class="spin" style="width:42px;height:42px;border:1.5px solid rgba(126,207,110,.2);right:4%;top:50%;margin-top:-21px;animation-duration:12s;animation-direction:reverse;"></div>
+  <div class="spin" style="width:26px;height:26px;border:1px solid rgba(100,180,80,.15);right:4%;top:50%;margin-top:-13px;margin-right:8px;animation-duration:7s;"></div>
+  <!-- glowing citation nodes -->
+  <div class="node" style="width:10px;height:10px;background:#7ecf6e;left:15%;top:40%;box-shadow:0 0 8px #7ecf6e;animation-delay:0s;"></div>
+  <div class="node" style="width:8px;height:8px;background:#56c43e;left:28%;top:60%;box-shadow:0 0 6px #56c43e;animation-delay:.8s;"></div>
+  <div class="node" style="width:10px;height:10px;background:#8cd464;right:15%;top:38%;box-shadow:0 0 8px #8cd464;animation-delay:1.5s;"></div>
+  <div class="node" style="width:8px;height:8px;background:#7ecf6e;right:28%;top:62%;box-shadow:0 0 6px #7ecf6e;animation-delay:.4s;"></div>
+  <!-- leaves -->
+  <div class="leaf" style="width:14px;height:18px;background:#3a8c2a;left:18%;top:10%;animation-delay:.3s;"></div>
+  <div class="leaf leafr" style="width:14px;height:18px;background:#4aaa35;right:18%;top:12%;animation-delay:.9s;"></div>
+  <!-- floaters -->
+  <div class="floater" style="width:4px;height:4px;background:#8cd464;left:30%;bottom:14%;animation-delay:0s;"></div>
+  <div class="floater" style="width:5px;height:5px;background:#7ecf6e;left:55%;bottom:10%;animation-delay:2s;"></div>
+  <div class="floater" style="width:3px;height:3px;background:#aaff44;left:76%;bottom:16%;animation-delay:3.5s;"></div>
+  <div class="tw">
+    <div class="ey">Tropical Rainforest</div>
+    <div class="mt">&#128218; <span>Sources</span></div>
+    <div class="br"></div>
+  </div>
+</div>
+</body>
+</html>
